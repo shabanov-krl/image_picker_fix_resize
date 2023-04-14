@@ -70,13 +70,13 @@ class ImageResizer {
       double downscaledHeight = (width / originalWidth) * originalHeight;
 
       if (width < height) {
-        if (!hasMaxWidth) {
+        if (hasMaxWidth) {
           width = downscaledWidth;
         } else {
           height = downscaledHeight;
         }
       } else if (height < width) {
-        if (!hasMaxHeight) {
+        if (hasMaxHeight) {
           height = downscaledHeight;
         } else {
           width = downscaledWidth;
